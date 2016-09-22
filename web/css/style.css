@@ -1,0 +1,65 @@
+html {
+    font-family: Raleway;
+    background: linear-gradient(#fff, #ccc);
+    height: 100%;
+}
+
+h1 {
+    text-align: center;
+}
+
+div.homepage {
+    margin-top: 200px;
+    text-align: center;
+}
+
+div.task-list {
+    width: 800px;
+    margin: 0 auto;
+}
+
+a {
+    color: #888;
+    text-align: center;
+    display: block;
+}
+
+table {
+    margin: 50px auto;
+}
+
+thead, td {
+    padding: 10px;
+}
+
+div.new-task-form {
+    width: 400px;
+    margin: 0 auto;
+}
+
+div.new-task-form label {
+    width: 110px;
+    display: inline-block;
+}
+
+div.new-task-form input {
+    display: inline-block;
+}
+
+div#task div {
+    margin: 10px;
+}
+
+input[type="submit"] {
+    font-family: Raleway;
+    display: block !important;
+    margin: 10px auto;
+    padding: 10px;
+    background: #fff;
+    font-size: 15px;
+}
+
+input[value="Delete"] {
+    background: #f00;
+    color: #fff;
+}

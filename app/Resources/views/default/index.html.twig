@@ -1,0 +1,10 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="homepage">
+        <h1>Welcome to the Task management system!</h1>
+        <h2>So what you wanna do?</h2>
+        <p><a href="{{ path('task_new') }}">Create a new task</a></p>
+        <p><a href="{{ path('task_index') }}">See the task list</a></p>
+    </div>
+{% endblock %}

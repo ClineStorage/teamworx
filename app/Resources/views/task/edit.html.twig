@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Edit task info</h1>
+
+    <div class="new-task-form">
+        {{ form_start(edit_form) }}
+        {{ form_widget(edit_form) }}
+        <input type="submit" value="Update" />
+        {{ form_end(edit_form) }}
+    </div>
+    
+    <a href="{{ path('task_index') }}">Back to the list</a>
+    {{ form_start(delete_form) }}
+    <input type="submit" value="Delete">
+    {{ form_end(delete_form) }}
+
+{% endblock %}

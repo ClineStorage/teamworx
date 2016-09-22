@@ -1,0 +1,55 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <div class="task-list">
+        <h1>Completed tasks</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for task in tasks %}
+                    {% if task.isCompleted %}
+                        <tr>
+                            <td>{{ task.title }}</td>
+                            <td>
+                                <a href="{{ path('task_edit', { 'id': task.id }) }}">edit</a>
+                            </td>
+                        </tr>
+                    {% endif %}
+                {% endfor %}
+            </tbody>
+        </table>
+
+
+        <h1>To do list</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for task in tasks %}
+                    {% if task.isCompleted %}
+                    {% else %}
+                        <tr>
+                            <td>{{ task.title }}</td>
+                            <td>
+                                <a href="{{ path('task_edit', { 'id': task.id }) }}">edit</a>
+                            </td>
+                        </tr>
+                    {% endif %}
+                {% endfor %}
+            </tbody>
+        </table>
+
+
+
+        <a class="new-task-link" href="{{ path('task_new') }}">Create a new task</a>
+    </div>
+{% endblock %}
